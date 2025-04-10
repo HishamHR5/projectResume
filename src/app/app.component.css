@@ -1,0 +1,11 @@
+/* .sidebar{
+    display: flex;
+    background-color: black;
+    width: 25%;
+    height: 100vh;
+} */
+.container{
+    display: flex;
+    width: 70%;
+    height: 100vh;
+}
