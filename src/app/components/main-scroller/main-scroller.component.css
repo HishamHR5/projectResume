@@ -1,0 +1,121 @@
+@media (min-width: 1024px) {
+    .main-content {
+        display: flex;
+        height: 100vh;
+        width: 80vw;
+        background-color: rgb(146, 183, 215);
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+
+}
+
+@media (width< 1024px) {
+    .main-content {
+        display: flex;
+        height: 100vh;
+        width: 92vw;
+        background-color: rgb(146, 183, 215);
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transition: all 0.5s;
+    }
+
+
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background-color: rgb(0 0 0 / 50%);;;
+    z-index: 2;
+}
+.body {
+    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+    background-image: url('../../../assets/img/cloud.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 1024px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 12%;
+    flex-direction: column;
+}
+
+.main-text {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    z-index: 9;
+}
+
+.changeing-text {
+    color: white;
+    z-index: 9;
+    font-size: 2rem;
+
+}
+
+/* .typewriter {
+    font-family: monospace;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+    color: white;
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  } */
+
+  .typewriter-container {
+    position: relative;
+    font-family: monospace;
+    font-size: 2rem;
+    display: inline-block;
+    color: white;
+  }
+  
+  .cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+  
+  .typed-text {
+    border-bottom: 2px solid #149ddd; /* Live underline */
+    padding-right: 4px;
+  }

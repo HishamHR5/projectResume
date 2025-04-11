@@ -1,42 +1,48 @@
-<div class="content">
-    <div class="profile" style="padding-bottom: 10px;">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid profile-img rounded-circle">
-        <h1 class="text-light header1"><a>Hisham R S</a></h1>
-        <br>
-        <div class="row" style="justify-content: space-evenly;background-color: black;">
+<ng-container>
+    <div class="content">
+        <div class="profile" style="padding-bottom: 10px;">
+            <!-- <img src="assets/img/profile-img.jpg" alt="" class="img-fluid profile-img rounded-circle"> -->
+            <div class="img-fluid profile-img rounded-circle"></div>
+            <h1 class="text-light header1"><a>Hisham R S</a></h1>
+            <br>
+            <div class="row" style="justify-content: space-evenly;background-color: black;">
 
-            <div class="button col-4" (click)="routeToInsta()">
-                <div class="button-bac">
-                    <i class="fab fa-instagram"></i>
+                <div class="button col-4" (click)="routeToInsta()">
+                    <div class="button-bac">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="button col-4" (click)="routeToGit()">
+                    <div class="button-bac">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <div class="button col-4" (click)="routeToLI()">
+                    <div class="button-bac">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
                 </div>
             </div>
-            <div class="button col-4" (click)="routeToGit()">
-                <div class="button-bac">
-                    <i class="fab fa-github"></i>
-                </div>
+        </div>
+        <div class="sections col">
+            <!-- home portfolio skilld contactme -->
+            <div class="section">
+                <i class="fa-solid fa-house"></i> <span>Home</span>
             </div>
-            <div class="button col-4" (click)="routeToLI()">
-                <div class="button-bac">
-                    <i class="fab fa-linkedin"></i>
-                </div>
+            <div class="section">
+                <i class="fa-solid fa-kitchen-set"></i> <span>Skills</span>
             </div>
+            <div class="section">
+                <i class="fa-solid fa-briefcase"></i> <span>Portfolio</span>
+            </div>
+            <div class="section">
+                <i class="fa-solid fa-message"></i> <span>Contact me</span>
+            </div>
+        </div>
+        <div class="visitor-counter">
+            <i class="fa-solid fa-rocket rocket-icon"></i>  You're the visitor:
+            <strong><span id='visitor-count' data-toggle="counter-up">0</span></strong>
         </div>
     </div>
- 
-</div>
-<div class="sections">
-    <!-- home portfolio skilld contactme -->
-     <div class="section home">
-        <div class="section-icon">
-            <i class="fa-solid fa-house"></i>
-        </div>
-        <div class="section-name">
-            <span>Home</span>
-        </div>
-     </div>
-    
-</div>
-<div class="visitor-counter">
-    <i style="color: aqua; background-color: antiquewhite;" class="icofont-rocket"></i> You're the visitor:
-    <strong><span id='visitor-count' data-toggle="counter-up">0</span></strong>
-</div>
+
+</ng-container>
