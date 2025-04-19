@@ -2,3 +2,38 @@
 body{
     margin: 0px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* The entire scrollbar */
+::-webkit-scrollbar {
+    width: 8px;       /* vertical scrollbar */
+    height: 8px;      /* horizontal scrollbar */
+  }
+  
+  /* Track (the background) */
+  ::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 10px;
+  }
+  
+  /* Handle (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #1c396a;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #040f48;
+  }
+  

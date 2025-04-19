@@ -14,7 +14,7 @@ export class MainScrollerComponent {
   texts: string[] = [
     'Frontend Developer',
     'Node.js Ninja',
-    'Cloud Enthusiast',
+    'Google Cloud Enthusiast',
   ];
   displayText: string = '';
   private currentIndex = 0;

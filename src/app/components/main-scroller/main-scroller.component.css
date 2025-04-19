@@ -1,82 +1,92 @@
-@media (min-width: 1024px) {
-    .main-content {
-        display: flex;
-        height: 100vh;
-        width: 80vw;
-        background-color: rgb(146, 183, 215);
-        align-items: center;
-        flex-direction: column;
-        display: flex;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        transition: all 0.5s ease-in-out;
-    }
-
-
-
+html {
+  transition: ease-in;
 }
 
-@media (width< 1024px) {
-    .main-content {
-        display: flex;
-        height: 100vh;
-        width: 92vw;
-        background-color: rgb(146, 183, 215);
-        align-items: center;
-        flex-direction: column;
-        display: flex;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        transition: all 0.5s;
-    }
-
-
-}
-
-
-.overlay {
+@media (min-width: 1025px) {
+  .container-1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  background-color: rgb(0 0 0 / 50%);;;
-    z-index: 2;
-}
-.body {
-    font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
-    background-image: url('../../../assets/img/cloud.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    height: 1024px;
-    width: 100%;
-    z-index: 1;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 12%;
     flex-direction: column;
+    width: calc(100vw - 20vw);
+    right: 0;
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+
+
+}
+
+@media (max-width: 1024px) {
+
+  .container-1 {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: calc(100vw - 8vw);
+    position: absolute;
+    right: 0;
+    height: 100%;
+  }
+
+
+
+
+}
+
+.main-content {
+  height: 100vh;
+  background-color: rgb(146, 183, 215);
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  right: 0;
+  position: static;
+}
+
+.body {
+  font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      /* overlay color */
+      rgba(0, 0, 0, 0.5)
+      /* overlay color */
+    ),
+    url('../../../assets/img/cloud.jpg');
+  /* background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 4rem;
+  flex-direction: column;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
 }
 
 .main-text {
-    color: white;
-    font-size: 60px;
-    font-weight: 700;
-    z-index: 9;
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  z-index: 9;
 }
 
 .changeing-text {
-    color: white;
-    z-index: 9;
-    font-size: 2rem;
+  color: white;
+  z-index: 9;
+  font-size: 2rem;
 
 }
 
@@ -97,25 +107,65 @@
     25%, 75% { opacity: 0; }
   } */
 
-  .typewriter-container {
-    position: relative;
-    font-family: monospace;
-    font-size: 2rem;
-    display: inline-block;
-    color: white;
+.typewriter-container {
+  position: relative;
+  font-family: monospace;
+  font-size: 2rem;
+  display: inline-block;
+  color: white;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
   }
-  
-  .cursor {
-    display: inline-block;
-    animation: blink 0.7s infinite;
+
+  25%,
+  75% {
+    opacity: 0;
   }
-  
-  @keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-  }
-  
-  .typed-text {
-    border-bottom: 2px solid #149ddd; /* Live underline */
-    padding-right: 4px;
-  }
+}
+
+.typed-text {
+  border-bottom: 2px solid #149ddd;
+  /* Live underline */
+  padding-right: 4px;
+}
+
+.section-title {
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
