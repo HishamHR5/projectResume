@@ -15,13 +15,85 @@
             </div>
         </div>
     </div>
-    <div class="section-title" style="height: 1024px; width: 100%;">
+    <div class="section-title">
         <h2>Tech Stack</h2>
+        <div class="cards">
+            <div class="card-front">
+                <div class="card-title" style="font-size: 20px;float: left;">
+                    <span>FRONTEND</span>
+                </div>
+                <div class="frontend ">
+                    <div class="skill-box">
+                        <i class="devicon-angularjs-plain colored"></i>
+                        <span>ANGULAR</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="devicon-react-original colored"></i>
+                        <span>REACT</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-front">
+                <div class="card-title" style="font-size: 20px;float: left;">
+                    <span>BACKEND</span>
+                </div>
+                <div class="backend frontend">
+                    <div class="skill-box">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>NodeJS</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="devicon-express-original colored"></i>
+                        <span>Express</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="devicon-mongodb-plain colored"></i>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="section-title">
         <h2>Portfolio</h2>
+
+        <div class="project-card" (click)="routeToSnacgo()">
+            <img src="assets/snacgo.png" alt="My Website Preview" />
+            <div class="project-info">
+                <h3>SnacGo</h3>
+                <span class="status">🚧 In Progress</span>
+            </div>
+        </div>
     </div>
-    <div class="section-title">
-        <h2>Contact</h2>
+    <div class="section-title" id="contact">
+        <h2>Contact Me</h2>
+        <form class="simple-contact-form">
+            <div class="row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit" class="left-button">Send</button>
+        </form>
     </div>
+
 </div>

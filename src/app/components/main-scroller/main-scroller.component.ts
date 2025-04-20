@@ -45,4 +45,8 @@ export class MainScrollerComponent {
       setTimeout(() => this.startTyping(), 300);
     }
   }
+
+  routeToSnacgo(){
+    window.location.href = "https://snacgo.com/"
+  }
 }
