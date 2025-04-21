@@ -68,7 +68,7 @@ export class MainScrollerComponent {
 
     emailjs.send(serviceID, templateID, templateParams, userID).then(
       () => {
-        alert('Message sent successfully!');
+        alert('✅ Message sent successfully!');
         this.form = { name: '', email: '', message: '' };
       },
       (err) => {
