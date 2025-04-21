@@ -7,7 +7,7 @@
             <br>
             <div class="row" style="justify-content: space-evenly;background-color: black;">
 
-                <div class="button col-4"  (click)="routeToInsta()">
+                <div class="button col-4" (click)="routeToInsta()">
                     <div class="button-bac">
                         <i class="fab fa-instagram"></i>
                     </div>
@@ -29,10 +29,10 @@
             <div id="homeS" class="section" (click)="goTohome()">
                 <i class="fa-solid fa-house"></i> <span>Home</span>
             </div>
-            <div id="techS" class="section"  (click)="goTotech()">
+            <div id="techS" class="section" (click)="goTotech()">
                 <i class="fa-solid fa-kitchen-set"></i> <span>Tech Stack</span>
             </div>
-            <div id="portS" class="section"  (click)="goToport()">
+            <div id="portS" class="section" (click)="goToport()">
                 <i class="fa-solid fa-briefcase"></i> <span>Portfolio</span>
             </div>
             <div id="contactS" class="section" (click)="goTocontact()">
@@ -40,8 +40,8 @@
             </div>
         </div>
         <div class="visitor-counter">
-            <i class="fa-solid fa-rocket rocket-icon"></i>  You're the visitor:
-            <strong><span id='visitor-count' data-toggle="counter-up">0</span></strong>
+            <i class="fa-solid fa-rocket rocket-icon"></i> You're the visitor:
+            <strong><span id='visitor-count' data-toggle="counter-up">{{visitorCount}}</span></strong>
         </div>
     </div>
 
