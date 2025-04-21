@@ -24,6 +24,7 @@ export class SidebarComponent {
   async getVisitorCount(): Promise<void> {
     const snapshot = await this.firestore.collection('visitor_counter').get().toPromise();
     this.visitorCount = snapshot?.size || 0;
+    console.log(this.visitorCount)
   }
   
   routeToInsta() {
