@@ -1,16 +1,31 @@
 import { Component } from '@angular/core';
 import { Services } from 'src/app/services.service';
-
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  constructor(private visitorService: Services) {}
-  ngOnInit(): void {
-    this.visitorService.incrementVisitor();
+  visitorCount: number=0;
+  constructor(private firestore: AngularFirestore) {}
+  
+  async ngOnInit() {
+    await this.addVisitor();  // Just log the visit, no check
+    this.getVisitorCount();
   }
+  
+  async addVisitor(): Promise<void> {
+    await this.firestore.collection('visitor_counter').add({
+      visitedAt: new Date()
+    });
+  }
+  
+  async getVisitorCount(): Promise<void> {
+    const snapshot = await this.firestore.collection('visitor_counter').get().toPromise();
+    this.visitorCount = snapshot?.size || 0;
+  }
+  
   routeToInsta() {
     window.location.href = 'https://www.instagram.com/hishamhr5/';
   }
