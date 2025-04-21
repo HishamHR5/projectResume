@@ -7,7 +7,7 @@
             <br>
             <div class="row" style="justify-content: space-evenly;background-color: black;">
 
-                <div class="button col-4" (click)="routeToInsta()">
+                <div class="button col-4"  (click)="routeToInsta()">
                     <div class="button-bac">
                         <i class="fab fa-instagram"></i>
                     </div>
@@ -26,16 +26,16 @@
         </div>
         <div class="sections col">
             <!-- home portfolio skilld contactme -->
-            <div class="section">
+            <div id="homeS" class="section" (click)="goTohome()">
                 <i class="fa-solid fa-house"></i> <span>Home</span>
             </div>
-            <div class="section">
+            <div id="techS" class="section"  (click)="goTotech()">
                 <i class="fa-solid fa-kitchen-set"></i> <span>Tech Stack</span>
             </div>
-            <div class="section">
+            <div id="portS" class="section"  (click)="goToport()">
                 <i class="fa-solid fa-briefcase"></i> <span>Portfolio</span>
             </div>
-            <div class="section">
+            <div id="contactS" class="section" (click)="goTocontact()">
                 <i class="fa-solid fa-message"></i> <span>Contact me</span>
             </div>
         </div>

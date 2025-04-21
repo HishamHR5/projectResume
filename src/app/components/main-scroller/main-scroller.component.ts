@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import emailjs from '@emailjs/browser';
 @Component({
   selector: 'app-main-scroller',
   templateUrl: './main-scroller.component.html',
@@ -11,6 +11,11 @@ export class MainScrollerComponent {
   //   'Node.js Ninja 🥷',
   //   'Cloud Enthusiast ☁',
   // ];
+  form = {
+    name: '',
+    email: '',
+    message: '',
+  };
   texts: string[] = [
     'Frontend Developer',
     'Node.js Ninja',
@@ -46,7 +51,29 @@ export class MainScrollerComponent {
     }
   }
 
-  routeToSnacgo(){
-    window.location.href = "https://snacgo.com/"
+  routeToSnacgo() {
+    window.location.href = 'https://snacgo.com/';
+  }
+
+  sendEmail() {
+    const serviceID = 'service_74dxs6s';
+    const templateID = 'template_i0avxhn';
+    const userID = '8Mrfx8exAfz-quC3Z';
+
+    const templateParams = {
+      from_name: this.form.name,
+      from_email: this.form.email,
+      message: this.form.message,
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, userID).then(
+      () => {
+        alert('Message sent successfully!');
+        this.form = { name: '', email: '', message: '' };
+      },
+      (err) => {
+        alert('Failed to send message:\n' + JSON.stringify(err));
+      }
+    );
   }
 }
